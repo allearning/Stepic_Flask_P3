@@ -57,7 +57,7 @@ def render_register():
     if request.method == "POST":
         if not form.validate_on_submit():
             return render_template("register.html", form=form)
-        if db.session.query(User).filter(User.name == form.username.data):
+        if db.session.query(User).filter(User.name == form.username.data).first():
             form.username.errors.append("Такое имя пользователя уже занято")
             return render_template("register.html", form=form)
         user = User(name=form.username.data)
