@@ -28,6 +28,9 @@
                         </ul>
                     </div>
                 {% endfor %}
+                {% if not orders %}
+                    <h1>Вы еще ничего не заказывали</h1>
+                {% endif %}
             </div>
         </section>
     </main>
