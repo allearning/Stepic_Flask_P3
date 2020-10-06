@@ -10,7 +10,7 @@ app.config.from_object(Config)
 db.init_app(app)
 app.app_context().push()
 
-USER_ONLY = True
+USER_ONLY = False
 
 if not USER_ONLY:
     with open("data/delivery_categories.csv") as csv_file:

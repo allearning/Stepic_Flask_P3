@@ -1,4 +1,4 @@
-import locale
+#import locale
 
 from flask import Flask
 from flask_migrate import Migrate
@@ -6,7 +6,7 @@ from flask_migrate import Migrate
 from config import Config
 from models import db
 
-locale.setlocale(locale.LC_ALL, 'ru_RU.UTF-8')
+#locale.setlocale(locale.LC_ALL, 'ru_RU.UTF-8')
 
 app = Flask(__name__)
 app.config.from_object(Config)
